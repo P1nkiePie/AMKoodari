@@ -1,0 +1,25 @@
+import java.io.*;
+
+public class eka {
+    public static void main(String args[]) {
+        Scanner lukija = new Scanner(System.in);
+        
+        String merkkijono = "Anna merkkijono, jonka tulostan: ";
+        KysyJaTulosta olio = new KysyJaTulosta(lukija);
+        olio.teeHommasi(merkkijono);
+    }
+}
+
+class KysyJaTulosta {
+    private Scanner lukija;
+    
+    public KysyJaTulosta(Scanner lukija) {
+       this.lukija = lukija;
+    }
+    
+    public void teeHommasi(String mjono) {
+        System.out.println(mjono);
+        String syote = lukija.nextLine();
+        System.out.println(syote);
+    }
+}

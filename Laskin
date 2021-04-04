@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+
+public class PaaOhjelma {
+    public static void main(String args[]) {
+		Scanner lukija = new Scanner(System.in); 
+        Tulostaja olio = new Tulostaja(lukija);
+        olio.Tulosta();
+    }
+}
+
+
+class Tulostaja {
+	private Scanner lukija;
+	
+	public Tulostaja(Scanner lukija) {
+		this.lukija = lukija;
+	}
+	
+	public void Tulosta() {
+		System.out.print("Syötä ensimmäinen kokonaisluku: ");
+		int eka = Integer.valueOf(lukija.nextLine());
+		System.out.print("Syötä toinen kokonaisluku: ");
+		int toka = Integer.valueOf(lukija.nextLine());
+		System.out.println("Lukujen summa: " + Laskin.Summa(eka, toka));
+	}
+
+}
+
+class Laskin
+{
+    static int Summa(int eka, int toka)
+    {
+        int summa = eka + toka;
+        return summa;
+    }
+}
+

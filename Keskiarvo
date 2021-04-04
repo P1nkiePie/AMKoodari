@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Keskiarvo {
+	public static void main(String[] args) {
+		Scanner lukija = new Scanner(System.in);
+		System.out.println("Ohjelma laskee syötettyjen arvosanojen keskiarvon.\nLopetus negatiivisella kokonaisluvulla.");
+		int maara = 0;
+		int summa = 0;
+			while (true) {
+				System.out.print("Anna arvosana (4-10):");
+				int syote = Integer.valueOf(lukija.nextLine());
+				if (syote<0) break;
+				maara++;
+				summa+=syote;
+			}
+		double keskiarvo = 1.0*summa/maara;
+		System.out.println("Ohjelmaan syötetty " + maara + " arvosanaa.");
+		System.out.println("Arvosanojen keskiarvo: " + keskiarvo);
+	}
+}

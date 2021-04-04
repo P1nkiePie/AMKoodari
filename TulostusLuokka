@@ -1,0 +1,33 @@
+import java.io.*;
+
+public class eka
+{
+    public static void main(String args[])
+    {
+        String merkkijono;
+        BufferedReader olio = new BufferedReader(new InputStreamReader(System.in));
+        TulostusLuokka tulostaja = new TulostusLuokka();
+
+        try{
+        System.out.println("Anna merkkijono, jonka tulostan: ");
+            merkkijono = olio.readLine();
+            tulostaja.Tulosta(merkkijono);
+
+        }catch (Exception e){
+            System.out.println("Ei toimi.");
+
+        }
+    }
+}
+
+class TulostusLuokka {
+  private String sana;
+  
+  public TulostusLuokka() {
+  }
+  
+  public void Tulosta(String sana) {
+		System.out.println(sana);
+	}
+
+} 

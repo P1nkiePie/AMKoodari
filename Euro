@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class Euro {
+	public static void main(String[] args) {
+		Scanner lukija = new Scanner(System.in);
+		
+		System.out.println("Syötä jokin markkamäärä:");
+		double luku = lukija.nextDouble();
+		double summa = 1.0*(luku/5.94573);
+		System.out.println("Markat euroina: " + summa);
+	}
+}		

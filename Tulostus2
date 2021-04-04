@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Tulostus {
+	public static void main(String[] args) {
+		Scanner lukija = new Scanner(System.in);
+		
+		System.out.println("Oletko mies vai nainen (m/n)?");
+		String sukupuoli = lukija.nextLine();
+		System.out.println("Anna ikäsi:");
+		int ika = Integer.valueOf(lukija.nextLine());
+		
+		if (sukupuoli.equals("m") && (ika>=0 && ika<=55)) System.out.println("Olet mies parhaassa iässä!");
+        else if (sukupuoli.equals("m") && (ika>=56 && ika<=100)) System.out.println("Olet viisas mies!");
+        else if (sukupuoli.equals("n") && (ika>=0 && ika<=55)) System.out.println("Olet neito kauneimmillaan!");
+        else if (sukupuoli.equals("n") && (ika>=56 && ika<=100)) System.out.println("Olet nuori ikäiseksesi!");
+        else System.out.println("Ohjelmassa tapahtunut virhe!"); 
+	}
+}

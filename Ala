@@ -1,0 +1,12 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Ala {
+	public static void main(String[] args) {
+		Scanner lukija = new Scanner(System.in);
+		
+		System.out.println("Anna ympyrän säde:");
+		int luku = Integer.valueOf(lukija.nextLine());
+		System.out.println("Ympyrän ala annetulla säteellä: " + (3.142*Math.pow(luku,2)));
+	}
+}

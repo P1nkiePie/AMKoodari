@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Kertoma {
+	public static void main(String[] args) {
+		Scanner lukija = new Scanner(System.in);
+		System.out.print("Anna kokonaisluku:");
+		int syote = Integer.valueOf(lukija.nextLine());
+		int luku = syote;
+		int i = 1;
+		for (int n=0; luku>n; luku--) {
+            i=i*luku;
+        }
+        System.out.println("Luvun " + syote + " Kertoma on " + i);
+	}	
+}

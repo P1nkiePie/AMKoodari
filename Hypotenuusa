@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Hypotenuusa {
+	public static void main(String[] args) {
+		Scanner lukija = new Scanner(System.in);
+		
+		System.out.println("Anna ensimmäinen kateetti:");
+		double eka = Math.pow(Integer.valueOf(lukija.nextLine()),2);
+		System.out.println("Anna toinen kateetti:");
+		double toka = Math.pow(Integer.valueOf(lukija.nextLine()),2);
+		double hypotenuusa = eka+toka;
+		System.out.println("Hypotenuusan pituus:" + Math.sqrt(hypotenuusa));
+		
+	}
+}

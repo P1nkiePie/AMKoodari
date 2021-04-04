@@ -1,0 +1,34 @@
+class Koira {
+  int ika;
+  String nimi;
+  String rotu;
+  String aani;
+
+ public Koira(int ika, String nimi, String rotu, String aani) {
+		this.ika = ika;
+		this.nimi = nimi;
+		this.rotu = rotu;
+		this.aani = aani; 
+	}
+  
+  public void tulosta_tiedot() {
+		System.out.println("Nimi: " + this.nimi);
+		System.out.println("Ikä: " + this.ika);
+		System.out.println("Rotu: " + this.rotu);
+	}
+	
+	public String annaAani() {
+		return this.aani;
+	}
+  
+}
+
+public class KoiranTesti {
+  public static void main(String[] args) {
+    
+    Koira rekku = new Koira (2, "Rekku", "Dalmatialainen", "Hau!!!");
+    System.out.println("Koiran tiedot:");
+    rekku.tulosta_tiedot();
+    System.out.println("\nKoira sanoo: " +rekku.annaAani());
+  }  
+} 
